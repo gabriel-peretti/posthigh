@@ -1,113 +1,135 @@
-import Image from 'next/image'
+'use client';
+import Button from './components/Button';
+import Header from './components/Header';
+import Section from './components/Section';
+import Footer from './components/Footer';
+import Image from 'next/image';
+import logo from '../public/banner.svg';
+import section1 from '../public/section1.svg';
+import section2 from '../public/section2.svg';
+import section3 from '../public/section3.svg';
+import { Calendar, GraphUpArrow, NodePlus } from 'react-bootstrap-icons';
+import AdvertisementCard from './components/AdvertisementCard';
+import StepsCard from './components/StepsCard';
 
 export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          posthigh&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+	return (
+		<>
+			<Header />
+			<div className="h-screen grid grid-cols-2 bg-no-repeat bg-cover bg-fixed bg-center bg-[url('/hero-bg.jpg')]">
+				<div className="flex flex-col justify-center items-end">
+					<div className="w-2/3">
+						<p
+							data-aos="fade-right"
+							data-aos-delay=""
+							className="text-white text-left text-5xl  mb-14"
+						>
+							Transforme suas redes sociais com a PostHigh
+						</p>
+						<p
+							data-aos="fade-right"
+							data-aos-delay="150"
+							className="text-white text-justify text-xl  mb-14"
+						>
+							Sinta o poder da PostHigh e leve sua presença nas redes sociais a novos patamares! Com
+							a nossa plataforma web inovadora, você pode publicar no Instagram e no Facebook de
+							maneira simples, ágil e eficaz.
+						</p>
+						<div data-aos="fade-right" data-aos-delay="100" className="text-left">
+							<Button variant="ghost" label="Saiba mais" />
+						</div>
+					</div>
+				</div>
+				<div className="flex items-center justify-center">
+					<div data-aos="fade-right" data-aos-delay="150" className="">
+						<Image height={600} alt="aa" src={logo} />
+					</div>
+				</div>
+			</div>
+			<svg
+				className="absolute -bottom-24 w-full"
+				xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 1440 320"
+			>
+				<path
+					fill="#ffffff"
+					fillOpacity="1"
+					d="M0,128L34.3,138.7C68.6,149,137,171,206,176C274.3,181,343,171,411,149.3C480,128,549,96,617,90.7C685.7,85,754,107,823,112C891.4,117,960,107,1029,85.3C1097.1,64,1166,32,1234,32C1302.9,32,1371,64,1406,80L1440,96L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"
+					data-darkreader-inline-fill=""
+				></path>
+			</svg>
+			<div className="h-80 flex flex-col text-5xl items-center font-bold text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary justify-center">
+				<p className=" ">Publique com</p>
+				<p className="">Facilidade e Alcance o </p>
+				<p className="">Sucesso!</p>
+			</div>
+			<div className="grid grid-cols-3 gap-10 mx-64 mb-36">
+				<AdvertisementCard
+					icon={<Calendar color="white" size={38} />}
+					title="Automação de postagens"
+					description="Simplifique sua vida digital agendando postagens com antecência. Nossa plataforma
+					permite que você programe suas publicações no Instagram e no Facebook, economizando
+					tempo e garantindo consistência."
+				/>
+				<AdvertisementCard
+					icon={<GraphUpArrow color="white" size={38} />}
+					title="Análise de dados"
+					description="Tenha acesso a ferramentas poderosas de análise de dados que ajudam a entender o
+						desempenho das suas postagens nas redes sociais. Acompanhe métricas-chave, como
+						enganjamento, alcance e impressões, para otimizar sua estratégia."
+				/>
+				<AdvertisementCard
+					icon={<NodePlus color="white" size={38} />}
+					title="Criação de conteúdo"
+					description="Tenha acesso a recursos e dicas de crfiação de conteúdo que aumentam o envolvimento do
+					seu público. Desenvolva postagens atraentes e criativas com a ajuda da PostHigh."
+				/>
+			</div>
+			<div className="flex flex-col mb-32 items-center justify-center">
+				<Image alt="aa" height={500} src={section3}></Image>
+				<div className="flex flex-row gap-10 mx-64">
+					<StepsCard
+						number="01"
+						title="Entrar"
+						description="Para começar, basta você acessar sua conta do Instagram para utilizar a plataforma. Isso torna o processo de entrada rápido e direto, sem a necessidade de criar uma conta separada."
+					/>
+					<StepsCard
+						number="02"
+						title="Criar e programar postagem"
+						description="Personalize e agende suas postagens de forma eficaz, economizando tempo e otimizando sua estratégia de redes sociais."
+					/>
+					<StepsCard
+						number="03"
+						title="Aproveitar a plataforma"
+						description="Após realizar a publicação, você pode aproveitar a plataforma de diversas maneiras, como: acessar os insights das publicações, sugestões de conteúdo, análises e tendências do marketing digital."
+					/>
+				</div>
+			</div>
+			<Section
+				title="Estratégias de crescimento nas redes sociais"
+				description="Descubra estratégias comprovadas para aumentar o alcance e o envolvimento nas redes sociais. Aprenda a conquistar seguidores, construir autoridade e alcançar resultados notáveis."
+				image={section2}
+				buttonLabel="Acessar"
+			/>
+			<Section
+				title="Dicas para publicações eficientes"
+				description="Otimize suas postagens nas redes sociais com dicas práticas. Aprenda a criar conteúdo envolvente, escolher as melhores imagens e escrever legendas cativantes."
+				image={section1}
+				buttonLabel="Acessar"
+				inverted
+			/>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+			<div className="h-72 grid grid-cols-2 bg-gradient-to-r from-secondary to-primary">
+				<div className="flex items-center ml-64">
+					<p className="text-5xl w-full text-white font-semibold">
+						Publique nas redes sociais com a PostHigh
+					</p>
+				</div>
+				<div className="flex items-center justify-center">
+					<Button variant="secondary" label="Comecar agora mesmo"></Button>
+				</div>
+			</div>
+			<Footer />
+		</>
+	);
 }
