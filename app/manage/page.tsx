@@ -2,6 +2,7 @@
 import { NextApiRequest } from 'next';
 import Link from 'next/link';
 import React from 'react';
+import axios from 'axios';
 
 interface SearchProps {
 	searchParams: NextApiRequest['query'];
@@ -12,18 +13,16 @@ export default function Manage({ searchParams }: SearchProps) {
 	console.log(search);
 	const [user, setUser] = React.useState<any>(null);
 
-	// async function getInstafeed() {
-	//     const token =
-	//         'IGQWRNMHE1N00wRkJhRFM3ZADF1OEpXaWVNbEVESE9VMWMyNldTWjFJaUMyZA2psTFR3dk9HallBUEFkWnNJS2tFWVphSmdJUWswWlkyTnQ5cFhyaTd2VUo0eDJVV2laQnNRamx5dk12WWhZAdFFKM3BFUTZAEck5xYUEZD';
-	//     const url = `https://graph.instagram.com/me?fields=id,username&access_token=${token}`;
-	//     const { data } = await axios.get(url);
-	//     setUser(data.username);
-	//     console.log(data.username);
-	// }
+	async function getInstafeed() {
+		const url = `https://graph.instagram.com/me?fields=id,username&access_token=${search}`;
+		const { data } = await axios.get(url);
+		setUser(data.username);
+		console.log(data.username);
+	}
 
-	// React.useEffect(() => {
-	//     getInstafeed();
-	// }, []);
+	React.useEffect(() => {
+		getInstafeed();
+	}, []);
 
 	return (
 		<>
