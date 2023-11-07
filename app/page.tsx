@@ -11,6 +11,7 @@ import section3 from '../public/section3.svg';
 import { Calendar, GraphUpArrow, NodePlus } from 'react-bootstrap-icons';
 import AdvertisementCard from './components/AdvertisementCard';
 import StepsCard from './components/StepsCard';
+import AdvertisementBanner from './components/AdvertisementBanner';
 
 export default function Home() {
 	return (
@@ -110,6 +111,8 @@ export default function Home() {
 				description="Descubra estratégias comprovadas para aumentar o alcance e o envolvimento nas redes sociais. Aprenda a conquistar seguidores, construir autoridade e alcançar resultados notáveis."
 				image={section2}
 				buttonLabel="Acessar"
+				hasButton
+				buttonLink="/strategies"
 			/>
 			<Section
 				title="Dicas para publicações eficientes"
@@ -117,18 +120,11 @@ export default function Home() {
 				image={section1}
 				buttonLabel="Acessar"
 				inverted
+				hasButton
+				buttonLink="/tips"
 			/>
 
-			<div className="h-72 grid grid-cols-2 bg-gradient-to-r from-secondary to-primary">
-				<div className="flex items-center ml-64">
-					<p className="text-5xl w-full text-white font-semibold">
-						Publique nas redes sociais com a PostHigh
-					</p>
-				</div>
-				<div className="flex items-center justify-center">
-					<Button variant="secondary" label="Comecar agora mesmo"></Button>
-				</div>
-			</div>
+			<AdvertisementBanner />
 			<Footer />
 		</>
 	);

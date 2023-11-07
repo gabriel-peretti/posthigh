@@ -1,5 +1,6 @@
 import Image, { StaticImageData } from 'next/image';
 import Button from './Button';
+import Link from 'next/link';
 
 interface SectionProps {
 	title: string;
@@ -7,6 +8,8 @@ interface SectionProps {
 	image: StaticImageData;
 	inverted?: boolean;
 	buttonLabel: string;
+	hasButton: boolean;
+	buttonLink?: string;
 }
 
 export default function Section({
@@ -15,6 +18,8 @@ export default function Section({
 	image,
 	inverted,
 	buttonLabel,
+	buttonLink = '/',
+	hasButton,
 }: SectionProps) {
 	return (
 		<div className=" grid grid-cols-2 flex-col-reverse white">
@@ -26,7 +31,11 @@ export default function Section({
 				<div className={`${inverted ? 'mr-32' : 'ml-32'} w-1/2`}>
 					<h2 className="text-3xl mb-5">{title}</h2>
 					<p className="mb-5 text-lg">{description}</p>
-					<Button size="sm" label={buttonLabel}></Button>
+					{hasButton && (
+						<Link href={buttonLink}>
+							<Button size="sm" label={buttonLabel} />
+						</Link>
+					)}
 				</div>
 			</div>
 			<div
