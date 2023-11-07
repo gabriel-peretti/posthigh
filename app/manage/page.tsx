@@ -13,11 +13,24 @@ export default function Manage({ searchParams }: SearchProps) {
 	console.log(search);
 	const [user, setUser] = React.useState<any>(null);
 
+	const postData = {
+		client_id: '347678657643128',
+		client_secret: '26c13f7878803d696c3909f0eb5e0169',
+		grant_type: 'authorization_code',
+		redirect_uri: 'https://www.posthigh.com.br/manage',
+		code: search,
+	};
+
 	async function getInstafeed() {
-		const url = `https://graph.instagram.com/me?fields=id,username&access_token=${search}`;
-		const { data } = await axios.get(url);
-		setUser(data.username);
-		console.log(data.username);
+		axios
+			.post('https://api.instagram.com/oauth/access_token', postData)
+			.then((response) => {
+				console.log('Access Token Response:', response.data);
+				setUser(response.data.username);
+			})
+			.catch((error) => {
+				console.error('Error fetching access token:', error);
+			});
 	}
 
 	React.useEffect(() => {
