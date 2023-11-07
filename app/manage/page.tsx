@@ -30,7 +30,7 @@ export default function Manage({ searchParams }: SearchProps) {
 			<Link
 				href={`https://api.instagram.com/oauth/authorize
         ?client_id=347678657643128
-        &redirect_uri=https://posthigh.com.br/manage
+        &redirect_uri=https://www.posthigh.com.br/manage
         &scope=user_profile,user_media
         &response_type=code`}
 			>
