@@ -2,9 +2,10 @@ interface ButtonProps {
 	label: string;
 	variant?: 'primary' | 'secondary' | 'ghost';
 	size?: 'sm' | 'md' | 'lg';
+	onPress?: () => void;
 }
 
-export default function Button({ label, variant = 'primary', size = 'md' }: ButtonProps) {
+export default function Button({ label, variant = 'primary', size = 'md', onPress }: ButtonProps) {
 	const sizeClasses = {
 		sm: 'w-44',
 		md: 'w-56',
@@ -22,5 +23,9 @@ export default function Button({ label, variant = 'primary', size = 'md' }: Butt
 
 	const classes = `${defaultClasses} ${sizeClasses[size]} ${variantClasses[variant]}`;
 
-	return <button className={classes}>{label}</button>;
+	return (
+		<button onClick={onPress} className={classes}>
+			{label}
+		</button>
+	);
 }
