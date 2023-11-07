@@ -8,7 +8,7 @@ interface SearchProps {
 }
 
 export default function Manage({ searchParams }: SearchProps) {
-	const search = searchParams;
+	const search = searchParams.code;
 	console.log(search);
 	const [user, setUser] = React.useState<any>(null);
 
@@ -34,6 +34,7 @@ export default function Manage({ searchParams }: SearchProps) {
 			</Link>
 
 			<div>Usuario logado: {user}</div>
+			<div>{search}</div>
 		</>
 	);
 }
