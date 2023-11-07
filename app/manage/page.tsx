@@ -28,11 +28,7 @@ export default function Manage({ searchParams }: SearchProps) {
 	return (
 		<>
 			<Link
-				href={`https://api.instagram.com/oauth/authorize
-        ?client_id=347678657643128
-        &redirect_uri=https://www.posthigh.com.br/manage
-        &scope=user_profile,user_media
-        &response_type=code`}
+				href={`https://api.instagram.com/oauth/authorize?client_id=347678657643128&redirect_uri=https://www.posthigh.com.br/manage&scope=user_profile,user_media&response_type=code`}
 			>
 				<div className="border border-red-500 w-20">login instagram</div>
 			</Link>
