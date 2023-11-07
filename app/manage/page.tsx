@@ -32,7 +32,7 @@ export default function Manage() {
 				buttonText="Login with instagram"
 				onSuccess={responseInstagram}
 				onFailure={responseInstagram}
-				redirectUri="https://www.posthigh.com.br/manage"
+				redirectUri="https://www.posthigh.com.br/"
 			/>
 		</>
 	);
