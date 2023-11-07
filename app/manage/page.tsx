@@ -13,23 +13,27 @@ export default function Manage({ searchParams }: SearchProps) {
 	console.log(search);
 	const [user, setUser] = React.useState<any>(null);
 
-	const postData = {
-		client_id: '347678657643128',
-		client_secret: '26c13f7878803d696c3909f0eb5e0169',
-		grant_type: 'authorization_code',
-		redirect_uri: 'https://www.posthigh.com.br/manage',
-		code: search,
-	};
-
 	async function getInstafeed() {
-		axios
-			.post('https://api.instagram.com/oauth/access_token', postData)
+		const insta_form = new URLSearchParams();
+		insta_form.append('client_id', '347678657643128');
+		insta_form.append('client_secret', '26c13f7878803d696c3909f0eb5e0169');
+		insta_form.append('grant_type', 'authorization_code');
+		insta_form.append('redirect_uri', 'https://www.posthigh.com.br/manage');
+		insta_form.append('code', `${search}`);
+
+		await axios({
+			method: 'POST',
+			url: 'https://api.instagram.com/oauth/access_token',
+			data: insta_form,
+			headers: {
+				'Content-Type': 'application/x-www-form-urlencoded',
+			},
+		})
 			.then((response) => {
-				console.log('Access Token Response:', response.data);
-				setUser(response.data.username);
+				console.log(response);
 			})
-			.catch((error) => {
-				console.error('Error fetching access token:', error);
+			.catch((err) => {
+				console.log(err.response);
 			});
 	}
 
