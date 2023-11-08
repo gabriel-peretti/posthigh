@@ -1,41 +1,40 @@
 'use client';
-import { NextApiRequest } from 'next';
+import { InstagramLogin } from '@amraneze/react-instagram-login';
+import axios from 'axios';
 import Link from 'next/link';
 import React from 'react';
-import axios from 'axios';
+import { signIn } from 'next-auth/react';
 
-interface SearchProps {
-	searchParams: NextApiRequest['query'];
-}
-
-export default function Manage({ searchParams }: SearchProps) {
-	const search = searchParams.code;
-	console.log(search);
+export default function Manage() {
 	const [user, setUser] = React.useState<any>(null);
 
 	async function getInstafeed() {
-		const insta_form = new URLSearchParams();
-		insta_form.append('client_id', '347678657643128');
-		insta_form.append('client_secret', '26c13f7878803d696c3909f0eb5e0169');
-		insta_form.append('grant_type', 'authorization_code');
-		insta_form.append('redirect_uri', 'https://www.posthigh.com.br/manage');
-		insta_form.append('code', `${search}`);
-
-		await axios({
-			method: 'POST',
-			url: 'https://api.instagram.com/oauth/access_token',
-			data: insta_form,
-			headers: {
-				'Content-Type': 'application/x-www-form-urlencoded',
-			},
-		})
-			.then((response) => {
-				console.log(response);
-			})
-			.catch((err) => {
-				console.log(err.response);
-			});
+		const token =
+			'IGQWRNS21SZAHhUYVpJaWVUbFVNcThWeVoyNUxoRDk5cUdCTlZAGR0hmNG05S2FvVkFDbTBKRjg4SzAyNU1KQ0hrRUNhZA0tRdl8ycW01RUc2R1JHWC1VdDBTQjBPNFpTeUhkTGViMEdXaFRHSW9OTXZAjQ2RxZAnluNVUZD';
+		const url = `https://graph.instagram.com/me?fields=id,username&access_token=${token}`;
+		const { data } = await axios.get(url);
+		setUser(data.username);
+		console.log(data);
 	}
+
+	const [caption, setCaption] = React.useState('Teste');
+
+	const handlePost = async () => {
+		const accessToken =
+			'IGQWRNS21SZAHhUYVpJaWVUbFVNcThWeVoyNUxoRDk5cUdCTlZAGR0hmNG05S2FvVkFDbTBKRjg4SzAyNU1KQ0hrRUNhZA0tRdl8ycW01RUc2R1JHWC1VdDBTQjBPNFpTeUhkTGViMEdXaFRHSW9OTXZAjQ2RxZAnluNVUZD';
+
+		try {
+			const response = await axios.post(
+				`https://graph.facebook.com/v18.0/17841400008460056/media
+				?image_url=https://media.discordapp.net/attachments/441990298394951680/1171675902724296725/post.png?ex=655d8b37&is=654b1637&hm=3bb5b4e17c61519cd568f45c1ce003d71c5e3451a51495fd30d738f84bb73746&=&width=671&height=671
+				&caption=${caption}}`
+			);
+
+			console.log('Post successful:', response.data);
+		} catch (error) {
+			console.error('Error posting to Instagram:', error);
+		}
+	};
 
 	React.useEffect(() => {
 		getInstafeed();
@@ -44,13 +43,21 @@ export default function Manage({ searchParams }: SearchProps) {
 	return (
 		<>
 			<Link
-				href={`https://api.instagram.com/oauth/authorize?client_id=347678657643128&redirect_uri=https://www.posthigh.com.br/manage&scope=user_profile,user_media&response_type=code`}
+				href={`https://api.instagram.com/oauth/authorize
+        ?client_id=347678657643128
+        &redirect_uri=https://posthigh.com.br/manage
+        &scope=user_profile,user_media
+        &response_type=code`}
 			>
 				<div className="border border-red-500 w-20">login instagram</div>
 			</Link>
 
 			<div>Usuario logado: {user}</div>
-			<div>{search}</div>
+			<button onClick={handlePost}>Post to Instagram</button>
+
+			<button className="border border-red-500" onClick={() => signIn('instagram')}>
+				Sign in
+			</button>
 		</>
 	);
 }
