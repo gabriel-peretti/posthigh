@@ -1,15 +1,18 @@
-// pages/api/twitter.ts
+// pages/api/twitter/post.ts
 import { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-	const { method, body } = req;
+	if (req.method !== 'POST') {
+		return res.status(405).json({ error: 'Method Not Allowed' });
+	}
 
+	const { body } = req;
 	const tweetEndpoint = 'https://api.twitter.com/2/tweets';
-	const bearerToken = 'Y1724274340009566208-lamRqcWzM2BFGT2FHrB47cNCD6pYBm';
+	const bearerToken = 'YOUR_TWITTER_BEARER_TOKEN';
 
 	try {
 		const response = await fetch(tweetEndpoint, {
-			method,
+			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
 				Authorization: `Bearer ${bearerToken}`,
