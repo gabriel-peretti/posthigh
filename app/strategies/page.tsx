@@ -10,8 +10,14 @@ export default function Strategies() {
 		<>
 			<Header />
 			<div className="h-screen flex flex-col items-center justify-center bg-primary">
-				<span className="text-white">Entre de crescimento nas redes sociais</span>
-				<span className="text-white">xerecrazy</span>
+				<span className="text-white text-left text-5xl  mb-14">
+					Estratégias de crescimento nas redes Sociais
+				</span>
+				<span className="text-white">
+					Descubra estratégias comprovadas para aumentar o alcance e o envolvimento nas redes
+					sociais. Aprenda a conquistar seguidores, construir autoridade e alcançar resultados
+					notáveis.
+				</span>
 			</div>
 			<svg
 				className="absolute -bottom-24 w-full"
@@ -26,45 +32,45 @@ export default function Strategies() {
 				></path>
 			</svg>
 			<Section
-				title="Estratégias de crescimento nas redes sociais"
-				description="Descubra estratégias comprovadas para aumentar o alcance e o envolvimento nas redes sociais. Aprenda a conquistar seguidores, construir autoridade e alcançar resultados notáveis."
+				title="Identifique seu público-alvo"
+				description="Imagine que você está administrando uma loja de roupas online que vende roupas de alta qualidade para mulheres jovens. Ao identificar seu público-alvo, você descobre que seu público ideal é composto por mulheres com idades entre 25 e 35 anos, com um interesse especial em moda sustentável e design exclusivo. Com essa compreensão, você pode criar conteúdo direcionado para atender às necessidades e preferências desse grupo demográfico."
 				image={section2}
 				buttonLabel="Acessar"
 				hasButton={false}
 			/>
 			<Section
-				title="Dicas para publicações eficientes"
-				description="Otimize suas postagens nas redes sociais com dicas práticas. Aprenda a criar conteúdo envolvente, escolher as melhores imagens e escrever legendas cativantes."
+				title="Crie conteúdo de valor"
+				description="Suponha que você administra um blog de culinária. Em vez de simplesmente compartilhar receitas, você cria postagens informativas que explicam técnicas culinárias, dão dicas sobre ingredientes de alta qualidade e fornecem insights sobre a história de pratos tradicionais. Essas postagens educativas atraem leitores interessados em aprender mais sobre culinária, construindo uma base de seguidores fiéis."
 				image={section1}
 				buttonLabel="Acessar"
 				inverted
 				hasButton={false}
 			/>
 			<Section
-				title="Dicas para publicações eficientes"
-				description="Otimize suas postagens nas redes sociais com dicas práticas. Aprenda a criar conteúdo envolvente, escolher as melhores imagens e escrever legendas cativantes."
+				title="Estabeleça consistência"
+				description="Se você é um influenciador de viagens no Instagram, manter uma programação consistente de postagens é essencial. Publicar uma foto ou história todos os dias às 10h, por exemplo, cria expectativas em seus seguidores, que esperam ansiosamente seu conteúdo diário. Essa regularidade ajuda a manter seu público envolvido."
 				image={section1}
 				buttonLabel="Acessar"
 				hasButton={false}
 			/>
 			<Section
-				title="Dicas para publicações eficientes"
-				description="Otimize suas postagens nas redes sociais com dicas práticas. Aprenda a criar conteúdo envolvente, escolher as melhores imagens e escrever legendas cativantes."
+				title="Use hashtags estrategicamente"
+				description="Se você é um fotógrafo de paisagens, usar hashtags relevantes pode ampliar o alcance de suas fotos. Ao adicionar hashtags como #Natureza #Viagem #Aventura em suas postagens, você permite que pessoas interessadas em tópicos relacionados descubram seu conteúdo, aumentando a visibilidade."
 				image={section1}
 				buttonLabel="Acessar"
 				inverted
 				hasButton={false}
 			/>
 			<Section
-				title="Dicas para publicações eficientes"
-				description="Otimize suas postagens nas redes sociais com dicas práticas. Aprenda a criar conteúdo envolvente, escolher as melhores imagens e escrever legendas cativantes."
+				title="Engaje com seus seguidores"
+				description="Suponha que você gerencia a página de uma pequena empresa local no Facebook. Responder prontamente a comentários e mensagens dos clientes, agradecendo pelos elogios e resolvendo preocupações, constrói relacionamentos sólidos com sua base de clientes e aumenta a fidelidade à marca."
 				image={section1}
 				buttonLabel="Acessar"
 				hasButton={false}
 			/>
 			<Section
-				title="Dicas para publicações eficientes"
-				description="Otimize suas postagens nas redes sociais com dicas práticas. Aprenda a criar conteúdo envolvente, escolher as melhores imagens e escrever legendas cativantes."
+				title="Colabore com outros"
+				description="Se você é um vlogger de fitness no Instagram, colaborar com outros vloggers de saúde e bem-estar pode ser uma estratégia eficaz. Parcerias podem incluir entrevistas cruzadas, compartilhamento de vídeos ou desafios colaborativos, aumentando a exposição para ambos os canais e atraindo novos seguidores."
 				image={section1}
 				buttonLabel="Acessar"
 				inverted

@@ -7,8 +7,10 @@ export default function Contact() {
 		<>
 			<Header />
 			<div className="h-screen flex flex-col items-center justify-center bg-primary">
-				<span className="text-white">Entre em contato</span>
-				<span className="text-white">xerecrazy</span>
+				<span className="text-white">Entre em contato!</span>
+				<span className="text-white">
+					Tem alguma pergunta, sugestão ou precisa de suporte? Estamos aqui para ajudar.
+				</span>
 			</div>
 			<svg
 				className="absolute -bottom-24 w-full"
@@ -25,11 +27,14 @@ export default function Contact() {
 			<div className="h-screen grid grid-cols-2">
 				<div className="flex flex-col items-center justify-center">
 					<h2>Formulario de contato</h2>
-					<span>aaaaaaaa info aqui</span>
+					<span>
+						Esperamos ansiosamente ouvir de você e estamos dedicados a fornecer assistência
+						excepcional para todas as suas necessidades.
+					</span>
 					<form className="space-y-4">
 						<div className="flex space-x-4">
 							<div className="flex flex-col">
-								<label htmlFor="field1">Field 1</label>
+								<label htmlFor="field1">Nome</label>
 								<input
 									id="field1"
 									type="text"
@@ -37,7 +42,7 @@ export default function Contact() {
 								/>
 							</div>
 							<div className="flex flex-col">
-								<label htmlFor="field2">Field 2</label>
+								<label htmlFor="field2">E-mail</label>
 								<input
 									id="field2"
 									type="text"
@@ -46,28 +51,28 @@ export default function Contact() {
 							</div>
 						</div>
 						<div className="flex flex-col">
-							<label htmlFor="field3">Field 3</label>
+							<label htmlFor="field3">Assunto</label>
 							<input id="field3" type="text" className="border-2 border-gray-300 p-2 rounded-md" />
 						</div>
 						<div className="flex flex-col">
-							<label htmlFor="textbox">Text Box</label>
+							<label htmlFor="textbox">Mensagem</label>
 							<textarea id="textbox" className="border-2 border-gray-300 h-32 p-2 rounded-md" />
 							<button
 								type="submit"
 								className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
 							>
-								Submit
+								Enviar mensagem
 							</button>
 						</div>
 					</form>
 				</div>
 				<div className="flex flex-col items-center justify-center">
 					<span className="font-bold">Endereço</span>
-					<span>end lalalala</span>
+					<span>Rua Teste, 489, Bairro Teste - Encantado/RS</span>
 					<span className="font-bold">Telefone</span>
-					<span>tel lalalala</span>
-					<span className="font-bold">Email</span>
-					<span>email lalalalalala</span>
+					<span>(51) 99492.8389</span>
+					<span className="font-bold">E-mail</span>
+					<span>contato@posthigh.com.br</span>
 				</div>
 			</div>
 			<AdvertisementBanner />

@@ -33,8 +33,8 @@ export default function Home() {
 							className="text-white text-justify text-xl  mb-14"
 						>
 							Sinta o poder da PostHigh e leve sua presença nas redes sociais a novos patamares! Com
-							a nossa plataforma web inovadora, você pode publicar no Instagram e no Facebook de
-							maneira simples, ágil e eficaz.
+							a nossa plataforma web inovadora, você pode publicar no Instagram, Facebook e Twitter
+							de maneira simples, ágil e eficaz.
 						</p>
 						<div data-aos="fade-right" data-aos-delay="100" className="text-left">
 							<Button variant="ghost" label="Saiba mais" />
@@ -92,7 +92,7 @@ export default function Home() {
 					<StepsCard
 						number="01"
 						title="Entrar"
-						description="Para começar, basta você acessar sua conta do Instagram para utilizar a plataforma. Isso torna o processo de entrada rápido e direto, sem a necessidade de criar uma conta separada."
+						description="Para começar, basta você acessar sua conta do Instagram ou Twitter para utilizar a plataforma. Isso torna o processo de entrada rápido e direto, sem a necessidade de criar uma conta separada."
 					/>
 					<StepsCard
 						number="02"
