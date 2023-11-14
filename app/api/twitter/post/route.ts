@@ -8,7 +8,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 	const { body } = req;
 	const tweetEndpoint = 'https://api.twitter.com/2/tweets';
-	const bearerToken = 'YOUR_TWITTER_BEARER_TOKEN';
+	const bearerToken = '1724274340009566208-lamRqcWzM2BFGT2FHrB47cNCD6pYBm';
 
 	try {
 		const response = await fetch(tweetEndpoint, {
