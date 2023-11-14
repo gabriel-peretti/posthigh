@@ -1,4 +1,4 @@
-// pages/api/twitter/post.ts
+// pages/api/twitter/post/index.ts
 import { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
