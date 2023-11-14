@@ -1,8 +1,8 @@
 'use client';
-import { InstagramLogin } from '@amraneze/react-instagram-login';
-import axios from 'axios';
-import Link from 'next/link';
-import { signIn } from 'next-auth/react';
+// import { InstagramLogin } from '@amraneze/react-instagram-login';
+// import axios from 'axios';
+// import Link from 'next/link';
+// import { signIn } from 'next-auth/react';
 
 import React, { useState, ChangeEvent } from 'react';
 
