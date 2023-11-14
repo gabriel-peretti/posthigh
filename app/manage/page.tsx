@@ -4,25 +4,25 @@
 // import Link from 'next/link';
 // import { signIn } from 'next-auth/react';
 
-import React, { useState, ChangeEvent } from 'react';
+// components/TwitterPost.js
+// components/TwitterPost.js
+import { useState, ChangeEvent } from 'react';
 
 const TwitterPost = () => {
-	const [tweetText, setTweetText] = useState<string>(''); // Adicionei o tipo string aqui
+	const [tweetText, setTweetText] = useState<string>('');
 
 	const handleTweetChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
 		setTweetText(e.target.value);
 	};
 
 	const postTweet = async () => {
-		const tweetEndpoint = 'https://api.twitter.com/2/tweets';
-		const bearerToken = '1724274340009566208-lamRqcWzM2BFGT2FHrB47cNCD6pYBm';
+		const tweetEndpoint = '/api/twitter/post'; // Caminho relativo para a API Route
 
 		try {
 			const response = await fetch(tweetEndpoint, {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json',
-					Authorization: `Bearer ${bearerToken}`,
 				},
 				body: JSON.stringify({
 					status: tweetText,
