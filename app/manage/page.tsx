@@ -4,18 +4,18 @@ import axios from 'axios';
 import Link from 'next/link';
 import { signIn } from 'next-auth/react';
 
-import React, { useState } from 'react';
+import React, { useState, ChangeEvent } from 'react';
 
 const TwitterPost = () => {
-  const [tweetText, setTweetText] = useState('');
+  const [tweetText, setTweetText] = useState<string>(''); // Adicionei o tipo string aqui
 
-  const handleTweetChange = (e) => {
+  const handleTweetChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
     setTweetText(e.target.value);
   };
 
   const postTweet = async () => {
     const tweetEndpoint = 'https://api.twitter.com/2/tweets';
-    const bearerToken = 'Y1724274340009566208-lamRqcWzM2BFGT2FHrB47cNCD6pYBm'; // Substitua pelo seu token de acesso Bearer
+    const bearerToken = '1724274340009566208-lamRqcWzM2BFGT2FHrB47cNCD6pYBm';
 
     try {
       const response = await fetch(tweetEndpoint, {
@@ -52,4 +52,6 @@ const TwitterPost = () => {
 };
 
 export default TwitterPost;
+
+
 
