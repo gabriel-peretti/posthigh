@@ -7,7 +7,7 @@ interface SectionProps {
 	description: string;
 	image: StaticImageData;
 	inverted?: boolean;
-	buttonLabel: string;
+	buttonLabel?: string;
 	hasButton: boolean;
 	buttonLink?: string;
 }
@@ -17,7 +17,7 @@ export default function Section({
 	description,
 	image,
 	inverted,
-	buttonLabel,
+	buttonLabel = 'Default button label',
 	buttonLink = '/',
 	hasButton,
 }: SectionProps) {
@@ -29,8 +29,8 @@ export default function Section({
 				}`}
 			>
 				<div className={`${inverted ? 'mr-32' : 'ml-32'} w-1/2`}>
-					<h2 className="text-3xl mb-5">{title}</h2>
-					<p className="mb-5 text-lg">{description}</p>
+					<h2 className="text-4xl font-bold mb-5">{title}</h2>
+					<p className="mb-5 text-xl">{description}</p>
 					{hasButton && (
 						<Link href={buttonLink}>
 							<Button size="sm" label={buttonLabel} />

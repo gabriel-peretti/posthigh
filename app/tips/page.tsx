@@ -2,16 +2,21 @@ import AdvertisementBanner from '../components/AdvertisementBanner';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import Section from '../components/Section';
-import section1 from '../../public/section1.svg';
-import section2 from '../../public/section2.svg';
+import tips1 from '../../public/tips/tips1.svg';
+import tips2 from '../../public/tips/tips2.svg';
+import tips3 from '../../public/tips/tips3.svg';
+import tips4 from '../../public/tips/tips4.svg';
+import tips5 from '../../public/tips/tips5.svg';
+import tips6 from '../../public/tips/tips6.svg';
+import tips7 from '../../public/tips/tips7.svg';
 
 export default function Tips() {
 	return (
 		<>
 			<Header />
-			<div className="h-screen flex flex-col items-center justify-center bg-primary">
-				<span className="text-white">Dicas para publicações eficientes</span>
-				<span className="text-white">
+			<div className="h-screen flex flex-col items-center justify-center bg-no-repeat bg-cover bg-fixed bg-center bg-[url('/banner/hero-bg.jpg')]">
+				<span className="text-white text-7xl font-bold">Dicas para publicações eficientes</span>
+				<span className="text-white text-center text-2xl w-2/3 mt-10">
 					Otimize suas postagens nas redes sociais com dicas práticas. Aprenda a criar conteúdo
 					envolvente, escolher as melhores imagens e escrever legendas cativantes.
 				</span>
@@ -31,53 +36,46 @@ export default function Tips() {
 			<Section
 				title="Conteúdo visual cativante"
 				description="Use imagens e vídeos de alta qualidade para atrair a atenção do seu público. Uma imagem vale mais que mil palavras, e um vídeo pode contar uma história envolvente."
-				image={section2}
-				buttonLabel="Acessar"
+				image={tips1}
 				hasButton={false}
 			/>
 			<Section
 				title="Legendas criativas"
-				description="Crie legendas que complementem sua imagem ou vídeo. Seja conciso e conte uma história relevante para envolver os seguidores"
-				image={section1}
-				buttonLabel="Acessar"
+				description="Crie legendas que complementem sua imagem ou vídeo. Seja conciso e conte uma história relevante para envolver os seguidores."
+				image={tips2}
 				inverted
 				hasButton={false}
 			/>
 			<Section
 				title="Hashtags estratégicas"
 				description="Pesquise e use hashtags relacionadas ao seu conteúdo para alcançar um público mais amplo. Mas evite o exagero; algumas hashtags relevantes são mais eficazes do que muitas irrelevantes."
-				image={section1}
-				buttonLabel="Acessar"
+				image={tips3}
 				hasButton={false}
 			/>
 			<Section
 				title="Postagens programadas"
 				description="Agende suas postagens para os horários em que seu público está mais ativo. Use a PostHigh para automatizar o processo."
-				image={section1}
-				buttonLabel="Acessar"
+				image={tips4}
 				inverted
 				hasButton={false}
 			/>
 			<Section
 				title="Interaja com seguidores"
 				description="Responda a comentários, mensagens e interaja com seus seguidores. Construir relacionamentos é fundamental."
-				image={section1}
-				buttonLabel="Acessar"
+				image={tips5}
 				hasButton={false}
 			/>
 			<Section
 				title="Explore recursos de histórias"
 				description="Use histórias do Instagram e Facebook para compartilhar atualizações diárias, bastidores e conteúdo efêmero que mantenha seu público engajado."
-				image={section1}
-				buttonLabel="Acessar"
+				image={tips6}
 				inverted
 				hasButton={false}
 			/>
 			<Section
 				title="Acompanhe tendências"
 				description="Esteja atento às tendências e eventos atuais. Participar de conversas populares pode aumentar sua visibilidade."
-				image={section1}
-				buttonLabel="Acessar"
+				image={tips7}
 				hasButton={false}
 			/>
 			<AdvertisementBanner />

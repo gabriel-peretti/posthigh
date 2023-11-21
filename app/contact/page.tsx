@@ -1,4 +1,5 @@
 import AdvertisementBanner from '../components/AdvertisementBanner';
+import Button from '../components/Button';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 
@@ -6,9 +7,9 @@ export default function Contact() {
 	return (
 		<>
 			<Header />
-			<div className="h-screen flex flex-col items-center justify-center bg-primary">
-				<span className="text-white">Entre em contato!</span>
-				<span className="text-white">
+			<div className="h-screen flex flex-col items-center justify-center bg-no-repeat bg-cover bg-fixed bg-center bg-[url('/banner/hero-bg.jpg')]">
+				<span className="text-white text-7xl font-bold">Entre em contato!</span>
+				<span className="text-white mt-10 text-2xl text-center">
 					Tem alguma pergunta, sugestão ou precisa de suporte? Estamos aqui para ajudar.
 				</span>
 			</div>
@@ -25,54 +26,63 @@ export default function Contact() {
 				></path>
 			</svg>
 			<div className="h-screen grid grid-cols-2">
-				<div className="flex flex-col items-center justify-center">
-					<h2>Formulario de contato</h2>
-					<span>
+				<div className="flex flex-col items-start ml-80 justify-center">
+					<h2 className="text-4xl font-semibold">Formulário de contato</h2>
+					<span className="mt-3 text-gray-500">
 						Esperamos ansiosamente ouvir de você e estamos dedicados a fornecer assistência
 						excepcional para todas as suas necessidades.
 					</span>
-					<form className="space-y-4">
+
+					<form className="space-y-4 w-full mt-10">
 						<div className="flex space-x-4">
-							<div className="flex flex-col">
-								<label htmlFor="field1">Nome</label>
-								<input
-									id="field1"
-									type="text"
-									className="border-2 border-gray-300 p-2 rounded-md"
-								/>
+							<div className="flex flex-col w-1/2">
+								<label htmlFor="field1" className="text-lg text-gray-500">
+									Nome
+								</label>
+								<input id="field1" type="text" className="border-2 border-gray-300 rounded-sm" />
 							</div>
-							<div className="flex flex-col">
-								<label htmlFor="field2">E-mail</label>
-								<input
-									id="field2"
-									type="text"
-									className="border-2 border-gray-300 p-2 rounded-md"
-								/>
+							<div className="flex flex-col w-1/2">
+								<label htmlFor="field2" className="text-lg text-gray-500">
+									E-mail
+								</label>
+								<input id="field2" type="text" className="border-2 border-gray-300  rounded-sm" />
 							</div>
 						</div>
 						<div className="flex flex-col">
-							<label htmlFor="field3">Assunto</label>
-							<input id="field3" type="text" className="border-2 border-gray-300 p-2 rounded-md" />
+							<label htmlFor="field3" className="text-lg text-gray-500">
+								Assunto
+							</label>
+							<input id="field3" type="text" className="border-2 border-gray-300 rounded-sm" />
 						</div>
 						<div className="flex flex-col">
-							<label htmlFor="textbox">Mensagem</label>
-							<textarea id="textbox" className="border-2 border-gray-300 h-32 p-2 rounded-md" />
-							<button
-								type="submit"
-								className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-							>
-								Enviar mensagem
-							</button>
+							<label htmlFor="textbox" className="text-lg text-gray-500">
+								Mensagem
+							</label>
+							<textarea
+								id="textbox"
+								className="border-2 border-gray-300 h-32 rounded-sm resize-none"
+							/>
+							<div className="mt-5">
+								<Button size="lg" label="Enviar mensagem" />
+							</div>
 						</div>
 					</form>
 				</div>
-				<div className="flex flex-col items-center justify-center">
-					<span className="font-bold">Endereço</span>
-					<span>Rua Teste, 489, Bairro Teste - Encantado/RS</span>
-					<span className="font-bold">Telefone</span>
-					<span>(51) 99492.8389</span>
-					<span className="font-bold">E-mail</span>
-					<span>contato@posthigh.com.br</span>
+				<div className="flex flex-col ml-60 items-start space-y-4 justify-center text-lg text-gray-500">
+					<div className="flex flex-col">
+						<span className="font-bold">Endereço</span>
+						<span className="w-3/4">
+							Rua Severino Augusto Pretto, 489, Bairro Santo Antão - Encantado/RS
+						</span>
+					</div>
+					<div className="flex flex-col">
+						<span className="font-bold">Telefone</span>
+						<span>(51) 99492 - 8389</span>
+					</div>
+					<div className="flex flex-col">
+						<span className="font-bold">E-mail</span>
+						<span>contato@posthigh.com.br</span>
+					</div>
 				</div>
 			</div>
 			<AdvertisementBanner />

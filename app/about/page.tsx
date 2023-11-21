@@ -1,16 +1,19 @@
 import AdvertisementBanner from '../components/AdvertisementBanner';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
+import section1 from '../../public/about/about1.svg';
+import section2 from '../../public/about/about2.svg';
+import section3 from '../../public/about/about3.svg';
+import section4 from '../../public/about/about4.svg';
 import Section from '../components/Section';
-import section1 from '../../public/section1.svg';
 
 export default function About() {
 	return (
 		<>
 			<Header />
-			<div className="h-screen flex flex-col items-center justify-center bg-primary">
-				<span className="text-white text-6xl font-bold">Sobre nós</span>
-				<span className="text-white">
+			<div className="h-screen flex flex-col items-center justify-center bg-no-repeat bg-cover bg-fixed bg-center bg-[url('/banner/hero-bg.jpg')]">
+				<span className="text-white text-7xl font-bold">Sobre nós</span>
+				<span className="text-white text-center text-2xl mt-10 w-2/3">
 					Na PostHigh, nossa paixão é capacitar indivíduos e empresas a prosperar nas redes sociais.
 					Somos uma equipe de especialistas em marketing digital e tecnologia, dedicados a
 					simplificar o gerenciamento de conteúdo nas plataformas de mídia social.
@@ -32,29 +35,25 @@ export default function About() {
 				title="Nossa missão"
 				description="Nossa missão é fornecer uma solução abrangente e eficaz para o gerenciamento de redes sociais. Queremos ajudar nossos clientes a alcançar o sucesso online, oferecendo ferramentas intuitivas e recursos de ponta para impulsionar sua presença nas redes sociais."
 				image={section1}
-				buttonLabel="Acessar"
 				hasButton={false}
 			/>
 			<Section
 				title="Nossa visão"
 				description="Nossa visão é ser a principal escolha quando se trata de simplificar o marketing nas redes sociais. Queremos ver nossos clientes alcançando seus objetivos e prosperando em um mundo digital em constante evolução."
-				image={section1}
-				buttonLabel="Acessar"
+				image={section2}
 				inverted
 				hasButton={false}
 			/>
 			<Section
 				title="O que fazemos"
-				description="Publicação Simplificada: Permitimos que você publique facilmente conteúdo no Instagram e no Facebook com apenas alguns cliques, economizando tempo e esforço. Análise de Dados Avançada: Fornecemos análises detalhadas para que você possa entender o desempenho de suas postagens e tomar decisões informadas. Estratégia de Marketing: Oferecemos insights e orientações sobre estratégias de marketing digital para maximizar seu impacto online. Suporte Excepcional: Nosso compromisso com o sucesso de nossos clientes se reflete em nosso suporte amigável e ágil."
-				image={section1}
-				buttonLabel="Acessar"
+				description="Publicação Simplificada: Permitimos que você publique facilmente conteúdo no Facebook, Instagram e Twitter com apenas alguns cliques, economizando tempo e esforço. Análise de Dados Avançada: Fornecemos análises detalhadas para que você possa entender o desempenho de suas postagens e tomar decisões informadas. Estratégia de Marketing: Oferecemos insights e orientações sobre estratégias de marketing digital para maximizar seu impacto online. Suporte Excepcional: Nosso compromisso com o sucesso de nossos clientes se reflete em nosso suporte amigável e ágil."
+				image={section3}
 				hasButton={false}
 			/>
 			<Section
 				title="Por que escolher a PostHigh"
 				description="Na PostHigh, acreditamos que o sucesso nas redes sociais não deve ser complicado. Nossa plataforma foi projetada para ser acessível a todos, desde empreendedores individuais a equipes de marketing experientes. Oferecemos uma maneira simples e eficaz de conquistar o mundo das redes sociais."
-				image={section1}
-				buttonLabel="Acessar"
+				image={section4}
 				inverted
 				hasButton={false}
 			/>

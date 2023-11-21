@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Button from './Button';
 
 export default function AdvertisementBanner() {
@@ -9,7 +10,9 @@ export default function AdvertisementBanner() {
 				</p>
 			</div>
 			<div className="flex items-center justify-center">
-				<Button variant="secondary" label="Comecar agora mesmo"></Button>
+				<Link href={'/contact'}>
+					<Button variant="secondary" label="Começar agora mesmo"></Button>
+				</Link>
 			</div>
 		</div>
 	);
