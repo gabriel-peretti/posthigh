@@ -2,18 +2,22 @@ import AdvertisementBanner from '../components/AdvertisementBanner';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import Section from '../components/Section';
-import section1 from '../../public/section1.svg';
-import section2 from '../../public/section2.svg';
+import section1 from '../../public/strategies/strategies1.svg';
+import section2 from '../../public/strategies/strategies2.svg';
+import section3 from '../../public/strategies/strategies3.svg';
+import section4 from '../../public/strategies/strategies4.svg';
+import section5 from '../../public/strategies/strategies5.svg';
+import section6 from '../../public/strategies/strategies6.svg';
 
 export default function Strategies() {
 	return (
 		<>
 			<Header />
-			<div className="h-screen flex flex-col items-center justify-center bg-primary">
-				<span className="text-white text-left text-5xl  mb-14">
-					Estratégias de crescimento nas redes Sociais
+			<div className="h-screen flex flex-col items-center justify-center bg-no-repeat bg-cover bg-fixed bg-center bg-[url('/banner/hero-bg.jpg')]">
+				<span className="text-white text-7xl font-bold">
+					Estratégias de crescimento nas redes sociais
 				</span>
-				<span className="text-white">
+				<span className="text-white w-2/3 text-2xl text-center mt-10">
 					Descubra estratégias comprovadas para aumentar o alcance e o envolvimento nas redes
 					sociais. Aprenda a conquistar seguidores, construir autoridade e alcançar resultados
 					notáveis.
@@ -34,45 +38,39 @@ export default function Strategies() {
 			<Section
 				title="Identifique seu público-alvo"
 				description="Imagine que você está administrando uma loja de roupas online que vende roupas de alta qualidade para mulheres jovens. Ao identificar seu público-alvo, você descobre que seu público ideal é composto por mulheres com idades entre 25 e 35 anos, com um interesse especial em moda sustentável e design exclusivo. Com essa compreensão, você pode criar conteúdo direcionado para atender às necessidades e preferências desse grupo demográfico."
-				image={section2}
-				buttonLabel="Acessar"
+				image={section1}
 				hasButton={false}
 			/>
 			<Section
 				title="Crie conteúdo de valor"
 				description="Suponha que você administra um blog de culinária. Em vez de simplesmente compartilhar receitas, você cria postagens informativas que explicam técnicas culinárias, dão dicas sobre ingredientes de alta qualidade e fornecem insights sobre a história de pratos tradicionais. Essas postagens educativas atraem leitores interessados em aprender mais sobre culinária, construindo uma base de seguidores fiéis."
-				image={section1}
-				buttonLabel="Acessar"
+				image={section2}
 				inverted
 				hasButton={false}
 			/>
 			<Section
 				title="Estabeleça consistência"
 				description="Se você é um influenciador de viagens no Instagram, manter uma programação consistente de postagens é essencial. Publicar uma foto ou história todos os dias às 10h, por exemplo, cria expectativas em seus seguidores, que esperam ansiosamente seu conteúdo diário. Essa regularidade ajuda a manter seu público envolvido."
-				image={section1}
-				buttonLabel="Acessar"
+				image={section3}
 				hasButton={false}
 			/>
 			<Section
 				title="Use hashtags estrategicamente"
 				description="Se você é um fotógrafo de paisagens, usar hashtags relevantes pode ampliar o alcance de suas fotos. Ao adicionar hashtags como #Natureza #Viagem #Aventura em suas postagens, você permite que pessoas interessadas em tópicos relacionados descubram seu conteúdo, aumentando a visibilidade."
-				image={section1}
-				buttonLabel="Acessar"
+				image={section4}
 				inverted
 				hasButton={false}
 			/>
 			<Section
 				title="Engaje com seus seguidores"
 				description="Suponha que você gerencia a página de uma pequena empresa local no Facebook. Responder prontamente a comentários e mensagens dos clientes, agradecendo pelos elogios e resolvendo preocupações, constrói relacionamentos sólidos com sua base de clientes e aumenta a fidelidade à marca."
-				image={section1}
-				buttonLabel="Acessar"
+				image={section5}
 				hasButton={false}
 			/>
 			<Section
 				title="Colabore com outros"
 				description="Se você é um vlogger de fitness no Instagram, colaborar com outros vloggers de saúde e bem-estar pode ser uma estratégia eficaz. Parcerias podem incluir entrevistas cruzadas, compartilhamento de vídeos ou desafios colaborativos, aumentando a exposição para ambos os canais e atraindo novos seguidores."
-				image={section1}
-				buttonLabel="Acessar"
+				image={section6}
 				inverted
 				hasButton={false}
 			/>
