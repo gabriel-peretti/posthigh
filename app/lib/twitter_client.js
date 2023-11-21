@@ -7,10 +7,9 @@ class TwitterAuthClientFactory {
 		if (!TwitterAuthClientFactory.instance) {
 			console.log('new instance');
 			const authClient = new auth.OAuth2User({
-				client_id: process.env.NEXT_PUBLIC_TWITTER_CLIENT_ID,
-				client_secret: process.env.NEXT_PUBLIC_TWITTER_CLIENT_SECRET,
-				// callback: 'http://localhost:3000/callback',
-				callback: 'https://www.posthigh.com.br/callback',
+				client_id: 'Z19ZUnROTGFJNHQzRWtzVkJpdVQ6MTpjaQ',
+				client_secret: 'chqoIcp3se-TU-Cfv2EZ0DKh0EgEtpo8D-0PG_YC25tXoVIJO7',
+				callback: 'http://localhost:3000/callback',
 				scopes: ['tweet.read', 'users.read', 'tweet.write', 'offline.access'],
 				token: {
 					access_token: token.accessToken,
