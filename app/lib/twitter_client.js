@@ -10,7 +10,7 @@ class TwitterAuthClientFactory {
 				client_id: process.env.NEXT_PUBLIC_TWITTER_CLIENT_ID,
 				client_secret: process.env.NEXT_PUBLIC_TWITTER_CLIENT_SECRET,
 				// callback: 'http://localhost:3000/callback',
-				callback: 'https://www.posthigh.com.br/api/auth/callback/twitter',
+				callback: 'https://www.posthigh.com.br/callback',
 				scopes: ['tweet.read', 'users.read', 'tweet.write', 'offline.access'],
 				token: {
 					access_token: token.accessToken,
